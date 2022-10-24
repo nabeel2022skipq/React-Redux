@@ -7,9 +7,12 @@ import { Provider } from 'react-redux'
 import AddPerson from './components/AddPerson';
 import PersonList from './components/PersonList';
 
-
+//Initialize the first state
 const initial_state={contacts:["Nabeel", "Hammad", "Ammar"]}
 
+
+//Reducer function which take the initial state and action
+//Return the next state of the application not modify the original state
 function reducer(state=initial_state, action)
 {
   switch(action.type)
@@ -23,7 +26,11 @@ function reducer(state=initial_state, action)
   }
 }
 
+//Creating the store which will make the state available to
+//the children components without passing the props
 const store=createStore(reducer)
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
