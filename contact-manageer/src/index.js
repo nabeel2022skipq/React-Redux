@@ -33,6 +33,7 @@ const store=createStore(reducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //Passing the store as props to the children components
   <Provider store={store}>
     <AddPerson></AddPerson>
     <PersonList></PersonList>
