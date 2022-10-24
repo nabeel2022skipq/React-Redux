@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 function AddPerson(props){
-
+  console.log("react test app")
   const [name, setName]=useState("")
 
   function handleChange(e)
