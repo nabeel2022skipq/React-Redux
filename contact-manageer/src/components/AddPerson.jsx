@@ -10,8 +10,10 @@ function AddPerson(props) {
     }
 
     function handleSubmit(e) {
-        props.addContact(person);
-        setPerson("")
+        if (person != "") {
+            props.addContact(person);
+            setPerson("")
+        }
         e.preventDefault();
     }
     return (
